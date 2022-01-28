@@ -6,41 +6,75 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="National Air Space Management System">
+  <meta name="keywords" content="NASMC">
+  <meta name="author" content="Ahmed Mokhtar">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="NASMC Safety">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <meta name="apple-mobile-web-app-title" content="NASMC Reports">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
 
   <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" type="icon/ico" href="favicon.ico"/>
 
-  <title>NASMC Safety</title>
+  <title>NASMC Reports</title>
   <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" type="text/css" href="splash/style.css">
 </head>
 <body>
+  <picture id="splash">
+    <source srcset="splash/img/light-4x.png 4x" media="(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)">
+    <source srcset="splash/img/dark-4x.png 4x" media="(prefers-color-scheme: dark)">
+    <img class="cover" aria-hidden="true" src="splash/img/light-4x.png" />
+  </picture>
 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 
-<script>
-  const firebaseConfig = {
-  apiKey: "AIzaSyBAi-tPbnAxlyF4-GkGrL9_ulfcwI0O01k",
-  authDomain: "nasmc-lsafety.firebaseapp.com",
-  projectId: "nasmc-lsafety",
-  storageBucket: "nasmc-lsafety.appspot.com",
-  messagingSenderId: "343763040305",
-  appId: "1:343763040305:web:b6bf5963dcb903b77fbd10",
-  measurementId: "G-3ER7BP1EGL"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
 
   <script>
-    var serviceWorkerVersion = '3668318482';
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBAi-tPbnAxlyF4-GkGrL9_ulfcwI0O01k",
+        authDomain: "nasmc-lsafety.firebaseapp.com",
+        projectId: "nasmc-lsafety",
+        storageBucket: "nasmc-lsafety.appspot.com",
+        messagingSenderId: "343763040305",
+        appId: "1:343763040305:web:b6bf5963dcb903b77fbd10",
+        measurementId: "G-3ER7BP1EGL"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
+
+
+
+  <script>
+    var serviceWorkerVersion = '708196297';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
